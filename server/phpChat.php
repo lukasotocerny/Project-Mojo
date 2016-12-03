@@ -1,6 +1,6 @@
 <?php
     
-    $link = mysqli_connect("", "", "", "");
+    $link = mysqli_connect("###", "###", "###", "###");
 
     if($_GET['action']=='get_conversation') {
         get_conversation($link);
