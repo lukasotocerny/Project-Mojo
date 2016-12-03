@@ -33,7 +33,6 @@ function get_conversation($link) {
     echo json_encode($arr);
 }
 
-
 function get_data_id($link) {
     $data = json_decode(file_get_contents("php://input"));
     $id = $data->id;
