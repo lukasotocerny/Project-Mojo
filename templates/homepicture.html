@@ -1,0 +1,20 @@
+<ion-view hide-back-button="true" class=" ">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" menu-toggle="left"><i class="icon menu-icon ion-navicon"></i></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">    
+        <div class="list card ">
+                    <div class="item item-body">
+                        <div class="">
+                            <img src="{{ pictureUrl }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                        </div>
+                    </div>
+                    <div ng-model="question_user" class="item item-divider" style="font-weight: bold">{{ question_user.username }}, 17</div>
+        </div>
+        <button ng-click="mojo_button()" class="button button-balanced button-outline button-block " style="border: 2px solid rgb(51,205,95); font-weight:bold;">MOJO</button>
+        <button ng-click="mono_button()" class="button button-assertive button-outline button-block " style="border: 2px solid rgb(170,0,0); font-weight:bold;">MONO</button>
+    </ion-content>
+</ion-view>

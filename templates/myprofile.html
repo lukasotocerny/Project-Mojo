@@ -1,0 +1,150 @@
+<style>
+.pull-left {
+    float: left;
+    display: inline;
+    margin-right: 8px;    
+}
+.pull-right {
+    float: right;
+    display: inline;    
+}
+.description-text {
+    color:rgb(105,105,105); 
+    display:inline;
+}
+.bold-text {
+    color:rgb(105,105,105); 
+    display:inline; 
+    font-weight:bold;
+}
+.ion-heart {
+    color: rgba(240,128,128,0.9);
+}
+</style>
+
+<ion-view hide-back-button="true" class=" ">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" menu-toggle="left"><i class="icon menu-icon ion-navicon"></i></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-body">
+                <div class="">
+                    <img src="{{ pictureUrl }}" id="profile-picture">
+                </div>
+            </div>
+            <div class="item item-divider sidemenu">
+                {{ myprofile.username }}, {{ myprofile.age }}
+                <i class="ion-edit pull-right" ui-sref='sidemenu.photo({ registration:0 })'></i>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-text-wrap item-divider sidemenu">
+                <i class="ion-edit pull-left" ui-sref="sidemenu.change_questions({question:1})"></i>
+                <div class="bold-text">{{ myprofile.q1 }}</div>
+                
+            </div>
+            <div class="item item-body">
+                <div style="float:left">
+                    <p class="description-text" id="text">Responses:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a1_total }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p class="description-text" id="text">Yes:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a1_yes }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p class="description-text" id="text">No:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a1_no }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="text-align:center;">
+                    <i style="font-size:30px;" class="ion-heart"> {{ myprofile.a1_like }}</i>
+                </div>
+            </div>
+
+            <div class="item item-text-wrap item-divider sidemenu">
+                <i class="ion-edit pull-left" ui-sref="sidemenu.change_questions({question:2})"></i>
+                <div class="bold-text">{{ myprofile.q2 }}</div>
+            </div>            
+            <div class="item item-body">
+                <div style="float:left">
+                    <p class="description-text" id="text">Responses:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a2_total }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p class="description-text" id="text">Yes:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a2_yes }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p class="description-text" id="text">No:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a2_no }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="text-align:center;">
+                    <i style="font-size:30px;" class="ion-heart"> {{ myprofile.a2_like }}</i>
+                </div>
+            </div>
+
+            <div class="item item-text-wrap item-divider sidemenu">
+                <i class="ion-edit pull-left" ui-sref="sidemenu.change_questions({question:3})"></i>
+                <div class="bold-text">{{ myprofile.q3 }}</div>
+            </div>
+            <div class="item item-body">
+                <div style="float:left">
+                    <p class="description-text" id="text">Responses:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a3_total }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p class="description-text" id="text">Yes:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a3_yes }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p class="description-text" id="text">No:</p>
+                </div>
+                <div style="float:right">
+                    <p class="bold-text" id="text">{{ myprofile.a3_no }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="text-align:center;">
+                    <i style="font-size:30px;" class="ion-heart"> {{ myprofile.a3_like }}</i>
+                </div>
+            </div>
+        </div>
+        <button class="button button-block button-stable" id="continue-button" ng-click="delete_account()">Delete Account</button>
+    </ion-content>
+</ion-view>

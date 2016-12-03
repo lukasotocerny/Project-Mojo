@@ -1,0 +1,58 @@
+<ion-view hide-back-button="false" class=" ">
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card ">
+            <div class="item item-divider profile">
+                <span>FIRST QUESTION</span>
+                <i ui-sref="registration.questions.example({question:'1'})" style="display:inline-block;float:right;" class="icon ion-android-list placeholder-icon"></i>
+            </div>
+            <div class="item item-body">
+                <form class="list ">
+                    <label class="item item-input">
+                        <textarea style="margin-left:-3px;" ng-model="data.q1" rows="2" maxlength="75" placeholder=" Write one or choose one with the button..."></textarea>
+                    </label>
+                    <p style="color:rgb(105,105,105);text-align:center;">ANSWER YOU ARE LOOKING FOR:</p>
+                </form>
+                <form class="list ">
+                    <ion-radio ng-model="data.a1" ng-value=1 class=" " id="text">Yes</ion-radio>
+                    <ion-radio ng-model="data.a1" ng-value=0 class=" " id="text">No</ion-radio>
+                </form>
+            </div>
+            <div class="item item-divider profile">
+                <span>SECOND QUESTION</span>
+                <i ui-sref="registration.questions.example({question:'2'})" style="display:inline-block;float:right;" class="icon ion-android-list placeholder-icon"></i>
+            </div>
+            <div class="item item-body">
+                <form class="list ">
+                    <label class="item item-input item-label">
+                        <textarea style="margin-left:-3px;" ng-model="data.q2" rows="2" maxlength="75" placeholder=" Write one or choose one with the button..."></textarea>
+                    </label>
+                    <p style="color:rgb(105,105,105);text-align:center;">ANSWER YOU ARE LOOKING FOR:</p>
+                </form>
+                <form class="list ">
+                    <ion-radio ng-model="data.a2" ng-value=1 class=" " id="text">Yes</ion-radio>
+                    <ion-radio ng-model="data.a2" ng-value=0 class=" " id="text">No</ion-radio>
+                </form>
+            </div>
+            <div class="item item-divider profile">
+                <span>THIRD QUESTION</span>
+                <i ui-sref="registration.questions.example({question:'3'})" style="display:inline-block;float:right;" class="icon ion-android-list placeholder-icon"></i>
+            </div>
+            <div class="item item-body">
+                <form class="list ">
+                    <label class="item item-input item-label">
+                        <textarea style="margin-left:-3px;" ng-model="data.q3" rows="2" maxlength="75" placeholder=" Write one or choose one with the button..."></textarea>
+                    </label>
+                    <p style="color:rgb(105,105,105);text-align:center;">ANSWER YOU ARE LOOKING FOR:</p>
+                </form>
+                <form class="list ">
+                    <ion-radio ng-model="data.a3" ng-value=1 class=" " id="text">Yes</ion-radio>
+                    <ion-radio ng-model="data.a3" ng-value=0 class=" " id="text">No</ion-radio>
+                </form>
+            </div>
+        </div>
+        <button ng-click="setupquestionsButton()" class=" button button-stable button-block " id="continue-button">Continue</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view hide-back-button="false" class=" ">
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card ">
+            <div class="item item-body">
+                <div class="">
+                    <img src=" {{ pictureUrl }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                </div>
+            </div>
+            <div class="item item-divider profile" style="font-weight:bold;">{{ user.username }}, {{ user.age }}</div>
+        </div>
+        <button ng-click="takePicture()" class="button button-block button-stable" id="continue-button">Take Photo</button>
+        <button ng-click="choosePicture()" class="button button-block button-stable" id="continue-button">Choose Photo</button>
+        <button ng-click="finish_button()" class="button button-block button-stable" id="continue-button">{{ button_text }}</button>
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,201 @@
+<style>
+.pull-left {
+    float: left;
+    display: inline;
+    margin-right: 8px;    
+}
+.pull-right {
+    float: right;
+    display: inline;    
+}
+.description-text {
+    color:rgb(105,105,105); 
+    display:inline;
+}
+.bold-text {
+    color:rgb(105,105,105); 
+    display:inline; 
+    font-weight:bold;
+}
+.ion-heart {
+    color: rgba(240,128,128,0.9);
+}
+ul[type="buttons"] {
+    list-style-type: none;
+    position: relative;
+    top: 5px;
+    bottom: 60px;
+}
+ul li button[type="mojo"] {
+    color: rgba(0,139,69,0.7);
+    float: right;
+    margin: 0px 80px 25px 0px;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 4px solid #e3e3e3;
+    background-color: #FFFFFF;
+}
+ul li button[type="mojo"]:active {
+  color: rgba(0,139,69,0.7);
+  background-color: #FFFFFF;
+  -webkit-transform: translateY(2px);
+}
+ul li button[type="mono"] {
+    color: rgba(205,92,92,0.85);
+    float: left;
+    margin: 0px 0px 25px 80px;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 4px solid #e3e3e3;
+    background-color: #FFFFFF;
+}
+ul li button[type="mono"]:active {
+  color: rgba(205,92,92,0.85);
+  background-color: #FFFFFF;
+  -webkit-transform: translateY(2px);
+}
+ul li button[type="mojo"]:hover {
+  color: rgba(0,139,69,0.7);
+  background-color: #FFFFFF;
+}
+ul li button[type="mono"]:hover {
+  color: rgba(205,92,92,0.85);
+  background-color: #FFFFFF;
+}
+</style>
+<ion-view hide-back-button="false" class=" ">
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-body">
+                <div class="">
+                    <img src="{{ pictureUrl }}" id="profile-picture">
+                </div>
+            </div>
+            <div class="item item-divider sidemenu">
+                {{ user_profile.username }}, {{ user_profile.age }}
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-text-wrap item-divider sidemenu">
+                {{ user_profile.q1 }}
+            </div>
+            <div class="item item-body">
+                <div style="float:left">
+                    <p id="text">Responses:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a1_total }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p id="text">Yes:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a1_yes }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p id="text">No:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a1_no }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="text-align:center;">
+                    <i style="font-size:30px;" class="ion-heart"> {{ user_profile.a1_like }}</i>
+                </div>
+            </div>
+
+            <div class="item item-text-wrap item-divider sidemenu">
+                {{ user_profile.q2 }}
+            </div>            
+            <div class="item item-body">
+                <div style="float:left">
+                    <p id="text">Responses:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a2_total }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p id="text">Yes:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a2_yes }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p id="text">No:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a2_no }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="text-align:center;">
+                    <i style="font-size:30px;" class="ion-heart"> {{ user_profile.a2_like }}</i>
+                </div>
+            </div>
+
+            <div class="item item-text-wrap item-divider sidemenu">
+                <div class="bold-text">{{ user_profile.q3 }}</div>
+            </div>
+            <div class="item item-body">
+                <div style="float:left">
+                    <p id="text">Responses:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a3_total }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p id="text">Yes:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a3_yes }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="float:left">
+                    <p id="text">No:</p>
+                </div>
+                <div style="float:right">
+                    <p id="text">{{ user_profile.a3_no }}</p>
+                </div>
+                </br>
+                <p></p>
+                <div style="text-align:center;">
+                    <i style="font-size:30px;" class="ion-heart"> {{ user_profile.a3_like }}</i>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!friend">
+            <ul type="buttons">
+                <li style="display: inline;">
+                    <button ng-click="mojo_button(0)" class="button" type="mono">MONO</button>
+                </li>
+                <li style="display: inline;">
+                    <button ng-click="mojo_button(1)" class="button" type="mojo">MOJO</button>
+                </li>
+            </ul>
+        </div>
+        <div ng-if="friend">
+            <button ng-click="block_button()" class="button button-stable button-block" id="continue-button">UNMOJO</button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,75 @@
+<style>
+button[type="send"] {
+    border: 1px solid rgba(105,105,105,0.2);
+    height: 33px;
+    width: 33px;
+    padding: 0 0 0 3px;
+    color: rgb(170,0,0);
+    background: #FFFFFF;
+    border-radius:100%;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: 11px;
+}
+input[type="message"] {
+    border: 1px solid rgba(105,105,105,0.2);
+    width: 318px;
+    display: inline-block;
+    text-align: left;
+    margin: 1px 0 0 0px;
+	padding: 5px 3px 5px 10px;
+	position: absolute;
+    left: 5px;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+.messages {
+	margin:0rem;
+	padding:0;
+	list-style-type:none;
+}
+.messages p[type="HIM"] {
+    background: rgba(105,105,105,0.5);
+	border-radius: 0.5rem 0.5rem 0.5rem 0;
+	color:#000000;
+	padding:.6875rem;
+	margin:0;
+	font-size:.875rem;
+}
+.messages p[type="ME"] {
+    background:rgba(170,0,0,0.6);
+	border-radius: 0.5rem 0.5rem 0 0.5rem;
+	color:rgba(0,0,0,0.8);
+	padding:.6875rem;
+	margin:0;
+	font-size:.875rem;
+}
+#chat-title {
+    color:rgb(179,179,179);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+</style>
+
+<ion-view hide-back-button="false" class=" ">
+    <ion-nav-title id="chat-title">{{ to_username }}</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear" ng-click="user_profile()"><i style="color:rgb(179,179,179);" class="icon ion-android-person"></i></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header" padding="true">
+        <div>
+            <ul ng-repeat="message in conversation" class="messages">
+                <li ng-style="set_style(message.user)">
+                    <p type="{{message.user}}">{{ message.message }}</p>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-stable">
+        <input ng-model="message" type="message" placeholder="Type a message"></input>
+        <button ng-click="mojo_button()" type="send"><i class="icon ion-android-send"></i></button>
+    </ion-footer-bar>
+</ion-view>

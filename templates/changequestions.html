@@ -1,0 +1,32 @@
+<style>
+.headline {
+    color:rgb(105,105,105); 
+    display:inline; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+</style>
+<ion-view hide-back-button="false" class=" ">
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card ">
+            <div class="item item-divider" style="text-align:center;">
+                <div class="headline">{{ vieworder }} Question</div>
+            </div>
+            <div class="item item-body">
+                <form class="list ">
+                    <label class="item item-input item-text-wrap">
+                        <textarea style="margin-left:-3px;" ng-model="myquestion.newquestion" rows="2" maxlength="75" placeholder="{{ myquestion.initialquestion }}"></textarea>
+                    </label>
+                    <p style="text-align:center;color:rgb(105,105,105);font-weight:bold;" class=" ">ANSWER YOU ARE LOOKING FOR:</p>
+                </form>
+                <form class="list ">
+                    <ion-radio ng-repeat="b in buttons" ng-model="myquestion.newanswer" ng-value="b.value" class=" ">{{ b.text }}</ion-radio>
+                </form>
+            </div>
+        </div>
+        <button ng-click="show_confirm()" class=" button button-assertive button-outline button-block ">Save</button>
+    </ion-content>
+</ion-view>

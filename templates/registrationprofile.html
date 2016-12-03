@@ -1,0 +1,45 @@
+<ion-view hide-back-button="true" class=" ">
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card ">
+            <div class="item item-divider profile" style="">YOUR GENDER</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-radio ng-model="data.me_male" ng-value=1 class=" " id="text">Male</ion-radio>
+                    <ion-radio ng-model="data.me_female" ng-value=1 class=" " id="text">Female</ion-radio>
+                </form>
+            </div>
+            <div class="item item-divider profile">YOUR AGE</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label" id="text">Age</span>
+                        <input ng-model="data.age" type="text" placeholder="Write your age here...">
+                    </label>
+                </form>
+            </div>
+            <div class="item item-divider profile">REASONS TO MOJO</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.date" id="text">Date</ion-checkbox>
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.friends" id="text">Friends</ion-checkbox>
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.work" id="text">Work</ion-checkbox>
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.fun" id="text">Fun</ion-checkbox>
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.hobbies" id="text">Hobbies</ion-checkbox>
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.other" id="text">Else</ion-checkbox>
+                </form>
+            </div>
+            <div class="item item-divider profile">GENDERS TO MOJO</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.male" ng-value=1 id="text">Male</ion-checkbox>
+                    <ion-checkbox class="checkbox-balanced" ng-model="data.female" ng-value=1 id="text">Female</ion-checkbox>
+                </form>
+            </div>
+        </div>
+        <button ng-click="continue_button()" class="button button-stable button-block" id="continue-button">Continue</button>
+    </ion-content>
+</ion-view>
+

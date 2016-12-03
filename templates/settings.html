@@ -1,0 +1,68 @@
+<style>
+p.text-checkbox, p.text-range {
+    color: rgb(105,105,105);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+p.text-checkbox {
+    position:relative;
+    bottom: 6px;
+}
+p.text-range {
+    text-align: center;
+}
+</style>
+<ion-view title="Settings" hide-back-button="true" class=" ">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" menu-toggle="left"><i class="icon menu-icon ion-navicon"></i></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card ">
+            <div class="item item-divider sidemenu" style="font-weight:bold;color:rgb(105,105,105);text-align:center;">REASONS TO MOJO</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-checkbox class="checkbox-stable" ng-model="data.date"><p class="text-checkbox">Date</p></ion-checkbox>
+                    <ion-checkbox class="checkbox-stable" ng-model="data.friends"><p class="text-checkbox">Friends</p></ion-checkbox>
+                    <ion-checkbox class="checkbox-stable" ng-model="data.work"><p class="text-checkbox">Work</p></ion-checkbox>
+                    <ion-checkbox class="checkbox-stable" ng-model="data.fun"><p class="text-checkbox">Fun</p></ion-checkbox>
+                    <ion-checkbox class="checkbox-stable" ng-model="data.hobbies"><p class="text-checkbox">Hobbies</p></ion-checkbox>
+                    <ion-checkbox class="checkbox-stable" ng-model="data.other"><p class="text-checkbox">Else</p></ion-checkbox>
+                </form>
+            </div>
+            <div class="item item-divider sidemenu" style="font-weight:bold;color:rgb(105,105,105);text-align:center;">GENDERS TO MOJO</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-checkbox class="checkbox-stable" ng-model="data.male"><p class="text-checkbox">Male</p></ion-checkbox>
+                    <ion-checkbox class="checkbox-stable" ng-model="data.female"><p class="text-checkbox">Female</p></ion-checkbox>
+                </form>
+            </div>
+            <div class="item item-divider sidemenu" style="font-weight:bold;color:rgb(105,105,105);text-align:center;">AGE RANGE TO MOJO</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-item class="range range-assertive "><p class="text-checkbox">Min</p>
+                        <input type="range" ng-model="data.min_age" min="15" max="{{data.max_age}}">
+                    </ion-item>
+                    <ion-item class="range range-assertive "><p class="text-checkbox">Max</p>
+                        <input type="range" ng-model="data.max_age" min="{{data.min_age}}" max="80">
+                    </ion-item>
+                    <p class="text-range" style="text-align:center;">Age range: {{ data.min_age }} - {{ data.max_age }}</p>
+                </form>
+            </div>
+            <div class="item item-divider sidemenu" style="font-weight:bold;color:rgb(105,105,105);text-align:center;">GEOLOCATION RANGE TO MOJO</div>
+            <div class="item item-body">
+                <form class="list ">
+                    <ion-item class="range range-assertive "><p class="text-checkbox">Distance</p>
+                        <input type="range" ng-model="data.distance" min="10" max="1000">
+                    </ion-item>
+                    <p class="text-range">Maximal distance: {{ data.distance }} km</p>
+                </form>
+            </div>
+        </div>
+        <button ng-click="saveButton()" class="button button-stable button-block" id="continue-button">Save</button>
+    </ion-content>
+</ion-view>

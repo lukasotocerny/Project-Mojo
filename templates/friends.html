@@ -1,0 +1,43 @@
+<style>
+.mojoheadline {
+    font-weight:500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color:rgb(105,105,105);
+    text-align:center;
+    font-size: 12px;
+}
+.item-avatar h2 {
+    margin: 9px !important;
+    font-size: 12px;
+    font-weight:bold;
+    color: rgb(105,105,105);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+</style>
+<ion-view hide-back-button="true" class=" ">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" menu-toggle="left"><i class="icon menu-icon ion-navicon"></i></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <img class="title-image" src="img/logo.png">
+    </ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <p class="mojoheadline">MOJO FRIENDS:</p>
+            <ion-list>
+                <ion-item ng-repeat="n in friends" class="item item-avatar" ui-sref="sidemenu.chat({ to_id: {{ n.id }}, to_username: '{{ n.username }}' })" type="item-text-wrap">
+                    <img ng-src="{{ n.photo }}">
+                    <h2> {{ n.username }} </h2>
+                </ion-item>
+            </ion-list>
+        <div class="spacer" style="width: 100%; height: 1rem;"></div>
+        <p class="mojoheadline">WAITING TO BE MOJOED:</p>
+            <ion-list>
+                <ion-item ng-repeat="n in connected" class="item item-avatar" ui-sref="sidemenu.friend_profile({ user_id: {{ n.id }}, friend: 'false' })" type="item-text-wrap">
+                    <img ng-src="{{ n.photo }}">
+                    <h2 style="font-weight:bold; color: #aa0000;"> {{ n.username }} </h2>
+                </ion-item>
+            </ion-list>
+    </ion-content>
+</ion-view>

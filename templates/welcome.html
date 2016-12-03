@@ -1,0 +1,58 @@
+<style>
+.item.item-input {
+    background-color: rgb(236,236,236);
+    border: 1px solid rgb(26,26,26);
+}
+.item.item-input input {
+    color: rgb(26,26,26);
+}
+input::-webkit-input-placeholder {
+    color: rgb(26,26,26);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+.button:active {
+   background-color: rgba(64,0,105,0) !important;
+   color: rgb(51,51,51) !important;
+}
+#login-button {
+    border: 1px solid rgb(26,26,26);
+    color: rgb(26,26,26);
+    font-weight: 600;
+    background-color:rgba(64,0,105,0);
+    border-radius: 2px;
+    margin: 0 0 25px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+#logo-image {
+    display: block;
+    width: auto;
+    height: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+</style>
+
+<ion-view hide-nav-bar="true" class=" ">
+    <ion-content padding="true" style="background-color:rgb(236,236,236);" class=" manual-remove-top-padding" scroll="false">
+        <div class="spacer" style="width: 100%; height: 70px;"></div>
+        <img src="img/fulllogo4.png" id="logo-image">
+        <form class="list ">
+            <ion-list>
+                <label class="item item-input">
+                    <input ng-model="data.username" type="text" placeholder="Username">
+                </label>
+                <label class="item item-input ">
+                    <input ng-model="data.password" type="password" placeholder="Password">
+                </label>
+            </ion-list>
+        </form>
+        <button ng-click="login(data.username, data.password)" type="submit" class=" button button-block" id="login-button">Log In</button>
+        <button ng-click="registerButton(data.username, data.password)" class=" button button-block" id="login-button">Register</button>
+    </ion-content>
+</ion-view>
