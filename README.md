@@ -29,6 +29,6 @@ by other thousands of dating apps. And lastly, but not least, the revenue model 
 its short run costs apart from being relying on unexpected investment. That is not a good model.</p>
 
 <h3>Screenshots</h3>
-<img src="img/sc1.png" alt="Drawing" style="width: 100px;"/>
-<img src="img/sc2.png" alt="Drawing" style="width: 100px;"/>
-<img src="img/sc3.png" alt="Drawing" style="width: 100px;"/>
+<img src="img/sc1.png" alt="Drawing" style="width: 30px;"/>
+<img src="img/sc2.png" alt="Drawing" style="width: 30px;"/>
+<img src="img/sc3.png" alt="Drawing" style="width: 30px;"/>
