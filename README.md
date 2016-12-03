@@ -16,7 +16,7 @@ where are the `.php` scripts with SQL queries.
 <h3>End Product</h3>
 <p>After a summer spend on programming the app, it is a functional app. It has basic user interface, sufficient enough for it to 
 serve as a neat minimal viable product. Surely it is only an alpha version, I could not have it passed through the Google Store as
-it requires lots of polishing, policies, debugging and many other stuff.</p>
+it requires lots of polishing, policies, debugging and many other stuff. I have worked on this app on my own.</p>
 
 <h3>Marketing point-of-view</h3>
 <p>Importantly to mention, technology on its own is not sufficient enough. Even though I have learned a lot during the actual process of app 
