@@ -30,5 +30,7 @@ its short run costs apart from being relying on unexpected investment. That is n
 
 <h3>Screenshots</h3>
 <img src="img/sc1.png" alt="Drawing" width="300"/>
+<p>
 <img src="img/sc2.png" alt="Drawing" width="300"/>
+<p>
 <img src="img/sc3.png" alt="Drawing" width="300"/>
