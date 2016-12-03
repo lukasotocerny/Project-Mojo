@@ -13,6 +13,11 @@ Mojo is written using the AngularJS framework, therefore HTML files in `/templat
 UI-Router library, which helps navigation in the app through states. The server database operation can be found in the folder `/server`, 
 where are the `.php` scripts with SQL queries.
 
+<h3>End Product</h3>
+<p>After a summer spend on programming the app, it is a functional app. It has basic user interface, sufficient enough for it to 
+serve as a neat minimal viable product. Surely it is only an alpha version, I could not have it passed through the Google Store as
+it requires lots of polishing, policies, debugging and many other stuff.</p>
+
 <h3>Marketing point-of-view</h3>
 <p>Importantly to mention, technology on its own is not sufficient enough. Even though I have learned a lot during the actual process of app 
 development, what I have found out later on was even more useful. Mojo is not a good business idea. There are several reasons for that. The
