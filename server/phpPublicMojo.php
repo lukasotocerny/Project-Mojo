@@ -3,28 +3,29 @@
 $link = mysqli_connect("###", "###", "###", "###");
 
     if($_GET['action']=='get_new_question') {
-        get_new_question($link); //INPUT answer_id, OUTPUT null if all answered, qid,qs for unanswered question
+        get_new_question($link);
     }
     else if ($_GET['action']=='add_data') {
-        add_data($link); //INPUT questionid, answerid, a1, a2, a3, status, OUTPUT none
+        add_data($link);
     }
     else if ($_GET['action']=='edit_data') {
-        edit_data($link); //INPUT id, OUTPUT none
+        edit_data($link);
     }
     else if ($_GET['action']=='mojo_button') {
-        mojo_button($link); //INPUT id, OUTPUT none
+        mojo_button($link);
     }
     else if ($_GET['action']=='get_friends') {
-        get_friends($link); //INPUT id, OUTPUT none
+        get_friends($link);
     }
     else if ($_GET['action']=='get_connected') {
-        get_connected($link); //INPUT id, OUTPUT none
+        get_connected($link);
     }
     else if ($_GET['action']=='respond_mojo') {
-        respond_mojo($link); //INPUT id, OUTPUT none
+        respond_mojo($link);
     }
 
 function add_data($link) { 
+    
     $data = json_decode(file_get_contents("php://input"));
     $question_id = $data->question_id;
     $answer_id = $data->answer_id;
@@ -45,8 +46,7 @@ function add_data($link) {
     }
 }
 
-function edit_data($link) {
-    //if approve both connect
+function edit_data($link) 
     $data = json_decode(file_get_contents("php://input"));
     $id = $data->id;
     $statement = $data->statement;
@@ -55,7 +55,6 @@ function edit_data($link) {
 }
 
 function respond_mojo($link) {
-
     $data = json_decode(file_get_contents("php://input"));
     $answer_id = $data->answer_id;
     $question_id = $data->question_id;
@@ -64,7 +63,6 @@ function respond_mojo($link) {
     mysqli_query($link, "UPDATE publicmojo SET wait=0, mojo=".$mojo." WHERE (answer_id=".$answer_id.") AND (question_id=".$question_id.")");
 
     mysqli_query($link, "UPDATE publicmojo SET wait=0, mojo=".$mojo." WHERE (answer_id=".$question_id.") AND (question_id=".$answer_id.")");
-
 }
 
 function mojo_button($link) { 
