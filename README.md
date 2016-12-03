@@ -8,6 +8,7 @@ for a user even more. But the key concept of Mojo is asymmetry. One has to answe
 second party only confirms/declines.</p>
 
 <h3>Project Structure</h3>
-The main app's functionality is in `/js/controller.js`, where there are scripts defining the behaviour in each of the UI-Router states.
+<p>The main app's functionality is in `/js/controller.js`, where there are scripts defining the behaviour in each of the UI-Router states.
 Mojo is written using the AngularJS framework, therefore HTML files in `/templates/` are binded through scopes. Ionic uses open-source
-UI-Router library, which helps navigation in the app through states.
+UI-Router library, which helps navigation in the app through states. The server database operation can be found in the folder `/server`, 
+where are the `.php` scripts with SQL queries.</p>
