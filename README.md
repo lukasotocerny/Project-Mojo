@@ -12,3 +12,13 @@ The main app's functionality is in `/js/controller.js`, where there are scripts 
 Mojo is written using the AngularJS framework, therefore HTML files in `/templates/` are binded through scopes. Ionic uses open-source
 UI-Router library, which helps navigation in the app through states. The server database operation can be found in the folder `/server`, 
 where are the `.php` scripts with SQL queries.
+
+<h3>Marketing point-of-view</h3>
+Importantly to mention, technology on its own is not sufficient enough. Even though I have learned a lot during the actual process of app 
+development, what I have found out later on was even more useful. Mojo is not a good business idea. There are several reasons for that. The
+app industry is an oversaturated market. There are thousands of apps with little niches, even though average user uses not even a dozen. Just
+take dating industry on its own. There are more than 1000 new dating services entering the industry every year, making it hard to break through
+as anywhere else. \n 
+Another reason is that Mojo does not solve any real problem that customer might have. It attempts to find a user relationship, but similar is done
+by other thousands of dating apps. And lastly, but not least, the revenue model is weak. It would be a bet into the future, that has no way of covering
+its short run costs apart from being relying on unexpected investment. That is not a good model.
