@@ -27,3 +27,8 @@ as anywhere else.</p>
 <p>Another reason is that Mojo does not solve any real problem that customer might have. It attempts to find a user relationship, but similar is done
 by other thousands of dating apps. And lastly, but not least, the revenue model is weak. It would be a bet into the future, that has no way of covering
 its short run costs apart from being relying on unexpected investment. That is not a good model.</p>
+
+<h3>Screenshots</h3>
+![alt tag](img/sc1.png)
+![alt tag](img/sc2.png)
+![alt tag](img/sc3.png)
