@@ -1,4 +1,5 @@
-<h2>Project Mojo - Mobile phone dating app using Ionic framework</h2>
+<h2>Project Mojo - Mobile phone dating app using Ionic library</h2>
+<img src="img/sc2.png" alt="Drawing" width="300"/>
 <h3>Introduction</h3>
 <p>The key idea behind Mojo is connecting people not primarily based on their physical appereance. It is done in a clever way of asking questions.
 Users write their own 3 questions that they want others to answer. Now in order to connect to another person, one firstly sees only
